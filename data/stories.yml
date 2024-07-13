@@ -1,53 +1,176 @@
 version: "3.1"
 stories:
-  - story: greet path
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - action: utter_list_options
 
-  - story: new reservation path
-    steps:
-      - intent: new_reservation
-      - action: utter_ask_date
-      - intent: provide_date
-        entities:
-          - date: "le 14 juillet"
-      - action: utter_ask_people
-      - intent: provide_number_of_people
-        entities:
-          - number_of_people: "5 personnes"
-      - action: utter_confirm_reservation
+- story: complete reservation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_all_options
+  - intent: tell_reservation
+  - action: utter_ask_date
+  - intent: tell_date
+    entities:
+    - date: soir
+  - slot_was_set:
+    - date: soir
+  - action: action_save_date
+  - slot_was_set:
+    - date_convertie: '2024-05-14'
+  - action: utter_ask_people
+  - intent: tell_people
+    entities:
+    - people: '3'
+  - slot_was_set:
+    - people: '3'
+  - action: action_save_people
+  - action: action_confirm_reservation
+  - intent: goodbye
+  - action: utter_goodbye
 
-  - story: delete reservation path
-    steps:
-      - intent: delete_reservation
-      - action: utter_ask_code
-      - intent: provide_code
-      - action: action_check_code
-      - action: utter_delete_confirmation
+- story: retrieve reservation success
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_all_options
+  - intent: tell_informations_reservations
+  - action: utter_ask_code
+  - intent: tell_code
+    entities:
+    - code: '429'
+  - slot_was_set:
+    - code: '429'
+  - action: action_retrieve_reservation
+  - intent: goodbye
+  - action: utter_goodbye
 
-  - story: reservation info path
-    steps:
-      - intent: reservation_info
-      - action: action_send_summary
+- story: retrieve wrong reservation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_all_options
+  - intent: tell_informations_reservations
+  - action: utter_ask_code
+  - intent: tell_code
+    entities:
+    - code: '478'
+  - slot_was_set:
+    - code: '478'
+  - action: action_retrieve_reservation
+  - action: utter_reservation_not_found
+  - action: action_listen
 
-  - story: show global menu path
-    steps:
-      - intent: show_menu
-      - action: utter_send_global_menu
+- story: get allergen information
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_all_options
+  - intent: tell_allergen
+  - action: action_allergens
+  - intent: goodbye
+  - action: utter_goodbye
 
-  - story: show allergen list path
-    steps:
-      - intent: show_allergen_list
-      - action: utter_send_allergen_list
+- story: get daily menu
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_all_options
+  - intent: tell_daily_menu
+  - action: action_daily_menu
+  - intent: goodbye
+  - action: utter_goodbye
 
-  - story: goodbye path
-    steps:
-      - intent: goodbye
-      - action: utter_goodbye
+- story: get whole menu
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_all_options
+  - intent: tell_whole_menu
+  - action: action_menu
+  - intent: goodbye
+  - action: utter_goodbye
 
-  - story: bot challenge path
-    steps:
-      - intent: bot_challenge
-      - action: utter_iamabot
+- story: cancel reservation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_all_options
+  - intent: tell_suppression
+  - action: utter_ask_code
+  - intent: tell_code
+    entities:
+    - code: '123'
+  - slot_was_set:
+    - code: '123'
+  - action: action_delete_reservation
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: modify reservation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_all_options
+  - intent: tell_informations_reservations
+  - action: utter_ask_code
+  - intent: tell_code
+    entities:
+    - code: '429'
+  - slot_was_set:
+    - code: '429'
+  - action: action_retrieve_reservation
+  - action: utter_retrieve_options
+  - intent: tell_reservation
+  - action: utter_ask_date
+  - intent: tell_date
+    entities:
+    - date: demain
+  - slot_was_set:
+    - date: demain
+  - action: action_save_date
+  - slot_was_set:
+    - date_convertie: '2024-05-15'
+  - action: utter_ask_people
+  - intent: tell_people
+    entities:
+    - people: '4'
+  - slot_was_set:
+    - people: '4'
+  - action: action_save_people
+  - action: action_confirm_reservation
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: inquire about city
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_all_options
+  - intent: tell_city
+  - action: utter_ask_city
+  - intent: tell_city
+    entities:
+    - city: 'Paris'
+  - slot_was_set:
+    - city: 'Paris'
+  - action: action_save_city
+  - action: utter_ask_reservation_details
+  - intent: tell_reservation
+  - action: utter_ask_date
+  - intent: tell_date
+    entities:
+    - date: soir
+  - slot_was_set:
+    - date: soir
+  - action: action_save_date
+  - slot_was_set:
+    - date_convertie: '2024-05-14'
+  - action: utter_ask_people
+  - intent: tell_people
+    entities:
+    - people: '2'
+  - slot_was_set:
+    - people: '2'
+  - action: action_save_people
+  - action: action_confirm_reservation
+  - intent: goodbye
+  - action: utter_goodbye

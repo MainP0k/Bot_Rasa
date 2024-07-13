@@ -1,73 +1,98 @@
-version: "3.1"
+version: '3.1'
+
+actions:
+  - action_save_date
+  - action_save_people
+  - action_retrieve_reservation
+  - action_daily_menu
+  - action_allergens
+  - action_menu
+  - action_confirm_reservation
+  - action_delete_reservation
+  - action_save_city
 
 intents:
-  - greet
-  - new_reservation
-  - delete_reservation
-  - reservation_info
-  - show_menu
-  - show_allergen_list
-  - provide_code
-  - invalid_code
-  - valid_code
-  - provide_date
-  - provide_number_of_people
   - goodbye
-  - bot_challenge
+  - greet
+  - tell_city
+  - tell_date
+  - tell_people
+  - tell_reservation
+  - tell_code
+  - tell_informations_reservations
+  - tell_suppression
+  - tell_allergen
+  - tell_daily_menu
+  - tell_whole_menu
+
+responses:
+
+  utter_greet:
+    - text: Bonjour, je suis un ChatBot de réservation pour restaurant. Comment puis-je vous aider aujourd'hui ?
+
+  utter_all_options:
+    - text: "Que souhaitez-vous : \n- Nouvelle Réservation \n- Infos sur réservation \n- Menu du jour \n- Liste Allergène \n- Lien vers la carte"
+
+  utter_goodbye:
+    - text: Au revoir ! Passez une bonne journée !
+
+  utter_ask_date:
+    - text: "Pour quand souhaitez-vous réserver ? \n- Ce soir \n- Demain \n- Une autre date (précisez la date)"
+
+  utter_ask_people:
+    - text: "Pour combien de personnes souhaitez-vous réserver ?"
+
+  utter_ask_code:
+    - text: "Veuillez me transmettre votre code de réservation s'il vous plaît."
+
+  utter_retrieve_options:
+    - text: "Voulez-vous modifier ou supprimer votre réservation ?"
+
+  utter_reservation_not_found:
+    - text: "Je suis désolé, je n'ai pas trouvé de réservation avec ce code. Veuillez vérifier et réessayer."
+
+  utter_ask_city:
+    - text: "Dans quelle ville souhaitez-vous faire la réservation ?"
+
+  utter_ask_reservation_details:
+    - text: "Pouvez-vous me fournir les détails de votre réservation, s'il vous plaît ?"
 
 entities:
-  - code
+  - people
   - date
-  - number_of_people
+  - code
+  - city
 
 slots:
+  date_convertie:
+    type: text
+    mappings:
+      - type: custom
+
+  code:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: code
+
+  people:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: people
+
   date:
     type: text
     mappings:
       - type: from_entity
         entity: date
-  number_of_people:
+
+  city:
     type: text
     mappings:
       - type: from_entity
-        entity: number_of_people
-  code:
-    type: text
-    mappings:
-      - type: from_entity
-        entity: code
+        entity: city
 
-responses:
-  utter_greet:
-    - text: "Bonjour"
-  utter_list_options:
-    - text: "Que puis-je faire pour vous?"
-  utter_ask_date:
-    - text: "Quelle date?"
-  utter_ask_people:
-    - text: "Combien de personnes?"
-  utter_confirm_reservation:
-    - text: "Votre réservation pour {number_of_people} personnes est confirmée pour {date}."
-  utter_ask_code:
-    - text: "Veuillez fournir le code de réservation."
-  utter_invalid_code:
-    - text: "Code invalide."
-  utter_delete_confirmation:
-    - text: "Votre réservation a été supprimée."
-  utter_send_summary:
-    - text: "Voici le résumé de votre réservation."
-  utter_send_global_menu:
-    - text: "Voici la carte globale."
-  utter_send_daily_menu:
-    - text: "Voici le menu du jour."
-  utter_send_allergen_list:
-    - text: "Voici la liste des allergènes."
-  utter_goodbye:
-    - text: "Au revoir!"
-  utter_iamabot:
-    - text: "Je suis un bot, propulsé par Rasa."
-
-actions:
-  - action_send_summary
-  - action_check_code
-  - action_delete_reservation
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
