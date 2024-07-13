@@ -2,33 +2,72 @@ version: "3.1"
 
 intents:
   - greet
+  - new_reservation
+  - delete_reservation
+  - reservation_info
+  - show_menu
+  - show_allergen_list
+  - provide_code
+  - invalid_code
+  - valid_code
+  - provide_date
+  - provide_number_of_people
   - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
   - bot_challenge
+
+entities:
+  - code
+  - date
+  - number_of_people
+
+slots:
+  date:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: date
+  number_of_people:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: number_of_people
+  code:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: code
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
+    - text: "Bonjour"
+  utter_list_options:
+    - text: "Que puis-je faire pour vous?"
+  utter_ask_date:
+    - text: "Quelle date?"
+  utter_ask_people:
+    - text: "Combien de personnes?"
+  utter_confirm_reservation:
+    - text: "Votre réservation pour {number_of_people} personnes est confirmée pour {date}."
+  utter_ask_code:
+    - text: "Veuillez fournir le code de réservation."
+  utter_invalid_code:
+    - text: "Code invalide."
+  utter_delete_confirmation:
+    - text: "Votre réservation a été supprimée."
+  utter_send_summary:
+    - text: "Voici le résumé de votre réservation."
+  utter_send_global_menu:
+    - text: "Voici la carte globale."
+  utter_send_daily_menu:
+    - text: "Voici le menu du jour."
+  utter_send_allergen_list:
+    - text: "Voici la liste des allergènes."
   utter_goodbye:
-  - text: "Bye"
-
+    - text: "Au revoir!"
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: "Je suis un bot, propulsé par Rasa."
 
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+actions:
+  - action_send_summary
+  - action_check_code
+  - action_delete_reservation

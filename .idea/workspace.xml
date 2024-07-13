@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc58140d-d672-41c7-8048-5eb8ef21da6d" name="Changes" comment="Init Commit 2" />
+    <list default="true" id="dc58140d-d672-41c7-8048-5eb8ef21da6d" name="Changes" comment="Init Commit 2">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions/actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/nlu.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/nlu.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/stories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/stories.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain.yml" beforeDir="false" afterPath="$PROJECT_DIR$/domain.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,44 +27,45 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "MainP0k"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MainP0k&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/MainP0k/Bot_Rasa.git",
-    "accountId": "7748166c-1381-4546-865a-8842d8ff4921"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MainP0k/Bot_Rasa.git&quot;,
+    &quot;accountId&quot;: &quot;7748166c-1381-4546-865a-8842d8ff4921&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2j9YTHbzNIDRuyEVfvnajZ8xdO5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Bot_Rasa" />
@@ -98,7 +107,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720800766132</updated>
-      <workItem from="1720800797163" duration="3072000" />
+      <workItem from="1720800797163" duration="5609000" />
     </task>
     <task id="LOCAL-00001" summary="Init Commit">
       <option name="closed" value="true" />
@@ -124,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720859750468</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Init Commit 2">
+      <option name="closed" value="true" />
+      <created>1720859819329</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720859819329</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,5 +162,8 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Bot_Rasa$main.coverage" NAME="main Coverage Results" MODIFIED="1720860988762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

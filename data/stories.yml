@@ -1,30 +1,53 @@
 version: "3.1"
-
 stories:
+  - story: greet path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: utter_list_options
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - story: new reservation path
+    steps:
+      - intent: new_reservation
+      - action: utter_ask_date
+      - intent: provide_date
+        entities:
+          - date: "le 14 juillet"
+      - action: utter_ask_people
+      - intent: provide_number_of_people
+        entities:
+          - number_of_people: "5 personnes"
+      - action: utter_confirm_reservation
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - story: delete reservation path
+    steps:
+      - intent: delete_reservation
+      - action: utter_ask_code
+      - intent: provide_code
+      - action: action_check_code
+      - action: utter_delete_confirmation
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - story: reservation info path
+    steps:
+      - intent: reservation_info
+      - action: action_send_summary
+
+  - story: show global menu path
+    steps:
+      - intent: show_menu
+      - action: utter_send_global_menu
+
+  - story: show allergen list path
+    steps:
+      - intent: show_allergen_list
+      - action: utter_send_allergen_list
+
+  - story: goodbye path
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: bot challenge path
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
