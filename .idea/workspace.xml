@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc58140d-d672-41c7-8048-5eb8ef21da6d" name="Changes" comment="Init DU PATH">
+    <list default="true" id="dc58140d-d672-41c7-8048-5eb8ef21da6d" name="Changes" comment="Init Coorection du path">
+      <change afterPath="$PROJECT_DIR$/.rasa/cache/tmpjzg8mvxb/synonyms.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/actions/actions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nlu.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/nlu.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/rules.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/rules.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/stories.yml" beforeDir="false" afterPath="$PROJECT_DIR$/data/stories.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain.yml" beforeDir="false" afterPath="$PROJECT_DIR$/domain.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/endpoints.yml" beforeDir="false" afterPath="$PROJECT_DIR$/endpoints.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/20240712-183740-devout-hutch.tar.gz" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,24 +46,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "terminal",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Bot_Rasa" />
@@ -108,7 +107,8 @@
       <option name="presentableId" value="Default" />
       <updated>1720800766132</updated>
       <workItem from="1720800797163" duration="7230000" />
-      <workItem from="1720887173363" duration="2236000" />
+      <workItem from="1720887173363" duration="2738000" />
+      <workItem from="1720945076082" duration="5523000" />
     </task>
     <task id="LOCAL-00001" summary="Init Commit">
       <option name="closed" value="true" />
@@ -150,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720870749783</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Init Coorection du path">
+      <option name="closed" value="true" />
+      <created>1720912468454</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720912468454</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +168,8 @@
     <MESSAGE value="Init Commit" />
     <MESSAGE value="Init Commit 2" />
     <MESSAGE value="Init DU PATH" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init DU PATH" />
+    <MESSAGE value="Init Coorection du path" />
+    <option name="LAST_COMMIT_MESSAGE" value="Init Coorection du path" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
